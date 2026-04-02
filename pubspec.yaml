@@ -16,6 +16,8 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.2.4
+  go_router: ^17.1.0
+  flutter_native_splash: ^2.4.7
 
 dev_dependencies:
   flutter_test:
@@ -30,3 +32,17 @@ flutter:
   assets:
     - assets/images/
 
+flutter_native_splash:
+  image: assets/images/black_app_logo_1.jpg
+  image_dark: assets/images/white_app_logo_1.png
+  fullscreen: true
+  color: "#42a5f5"
+  color_dark: "#042a49"
+  android: true
+  ios: true
+  web: false
+  android_12:
+    color: "#42a5f5"
+    color_dark: "#042a49"
+    image: assets/images/black_app_logo_1.jpg
+    image_dark: assets/images/white_app_logo_1.png
