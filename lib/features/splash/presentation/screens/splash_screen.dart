@@ -1,16 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shopping_app/app/asset_paths.dart';
+import 'package:shopping_app/features/auth/presentation/screens/sign_in_screen.dart';
 
-import '../../../../app/urls.dart';
-
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+
+  @override
+  void initState() {
+    super.initState();
+    _moveToNextScreen();
+  }
+
+  void _moveToNextScreen() async {
+    await Future.delayed(Duration(seconds: 3));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const SignInScreen()));
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(child: Image.asset("assets/images/black_app_logo_1.jpg")),
+      body: Center(child: Image.asset(AssetPaths.blackAppLogo)),
     );
   }
 }
