@@ -10,6 +10,7 @@ class ShoppingApp extends StatelessWidget {
   @override
   Widget build(context){
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       routerConfig: Routers.router,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
