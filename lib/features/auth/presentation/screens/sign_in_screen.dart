@@ -23,7 +23,7 @@ class _SignInScreenState extends State<SignInScreen> {
               Text(
                 AppStrings.signInHeading,
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                  fontWeight: FontWeight(700),
+                  fontWeight: FontWeight.w700,
                   fontSize: 24,
                 ),
               ),
@@ -31,7 +31,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 AppStrings.signInSubHeading,
                 style: Theme.of(context).textTheme.titleSmall!.copyWith(
                   color: Colors.grey,
-                  fontWeight: FontWeight(400),
+                  fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
               ),
