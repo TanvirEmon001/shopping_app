@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static final ThemeData _lightThemeData = ThemeData(
     brightness: .light,
+    fontFamily: "Nunito",
     scaffoldBackgroundColor: Colors.white,
     textTheme: TextTheme(
       bodySmall: TextStyle(color: Colors.black),
