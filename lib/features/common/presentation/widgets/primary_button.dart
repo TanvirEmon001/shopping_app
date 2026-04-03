@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/app/helpers/device_helpers.dart';
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({super.key, required this.buttonName, required this.onTap});
 
@@ -8,8 +9,7 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 45,
-      width: 318,
+      width: DeviceHelpers.getScreenWidth(context),
       child: ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
