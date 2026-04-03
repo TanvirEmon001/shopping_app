@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/app/constants/asset_paths.dart';
-import 'package:shopping_app/app/constants/strings.dart';
+import 'package:shopping_app/app/constants/app_strings.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/social_icon_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/secondary_button.dart';
@@ -27,14 +27,14 @@ class _SignInScreenState extends State<SignInScreen> {
                 mainAxisSize: .min,
                 children: [
                   Text(
-                    AppStrings.signInHeading,
+                    AppStrings.loginTitle,
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       fontWeight: FontWeight.w700,
                       fontSize: 24,
                     ),
                   ),
                   Text(
-                    AppStrings.signInSubHeading,
+                    AppStrings.loginSubTitle,
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(
                       color: Colors.grey,
                       fontWeight: FontWeight.w400,
@@ -100,7 +100,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         GestureDetector(
                           onTap: () {},
                           child: Text(
-                            AppStrings.forgetPass,
+                            AppStrings.forgetPassword,
                             style: TextStyle(
                               fontWeight: .w400,
                               fontSize: 10,
@@ -112,9 +112,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
 
-                  PrimaryButton(buttonName: "Sign In", onTap: () {}),
+                  PrimaryButton(buttonName: AppStrings.signIn, onTap: () {}),
                   const SizedBox(height: 10),
-                  SecondaryButton(buttonName: "Create Account", onTap: () {}),
+                  SecondaryButton(buttonName: AppStrings.createAccount, onTap: () {}),
                   const SizedBox(height: 30),
                   Padding(
                     padding: const EdgeInsets.only(left: 25, right: 25),
@@ -122,7 +122,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       spacing: 5,
                       children: [
                         Container(height: 1, width: 70, decoration: BoxDecoration(color: Color(0xFFD9D9D9))),
-                        Text("Or Sign In With", style: TextStyle(fontWeight: .w400, fontSize: 12, color: Color(0xFFBEBEBE)),),
+                        Text(AppStrings.orSignInWith, style: TextStyle(fontWeight: .w400, fontSize: 12, color: Color(0xFFBEBEBE)),),
                         Container(height: 1, width: 70, decoration: BoxDecoration(color: Color(0xFFD9D9D9))),
                       ],
                     ),
