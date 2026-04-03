@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/app/app_theme.dart';
+import 'package:shopping_app/app/theme/app_theme.dart';
 import 'package:shopping_app/app/routers/routers.dart';
 
 
@@ -12,8 +12,8 @@ class ShoppingApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: Routers.router,
-      theme: AppTheme.lightTheme,
-      darkTheme: AppTheme.darkTheme,
+      theme: MyAppTheme.lightTheme,
+      darkTheme: MyAppTheme.darkTheme,
       themeMode: .light,
     );
   }

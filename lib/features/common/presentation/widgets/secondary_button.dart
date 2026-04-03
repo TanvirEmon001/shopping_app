@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../../../app/helpers/device_helpers.dart';
 class SecondaryButton extends StatelessWidget {
   const SecondaryButton({super.key, required this.buttonName, required this.onTap});
 
@@ -8,8 +10,7 @@ class SecondaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 45,
-      width: 318,
+      width: DeviceHelpers.getScreenWidth(context),
       child: OutlinedButton(
         onPressed: onTap,
         style: OutlinedButton.styleFrom(

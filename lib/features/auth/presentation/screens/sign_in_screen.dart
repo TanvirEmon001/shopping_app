@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/app/asset_paths.dart';
-import 'package:shopping_app/app/strings.dart';
+import 'package:shopping_app/app/constants/asset_paths.dart';
+import 'package:shopping_app/app/constants/strings.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/social_icon_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/secondary_button.dart';
