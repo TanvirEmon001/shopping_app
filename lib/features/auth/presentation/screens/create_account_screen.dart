@@ -7,6 +7,7 @@ import 'package:shopping_app/features/auth/presentation/widgets/social_icon_butt
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
 
 import '../../../../app/theme/color_theme.dart';
+import '../widgets/title_subtitle_builder.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});
@@ -29,13 +30,8 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               crossAxisAlignment: .start,
               mainAxisSize: .min,
               children: [
-                Text(
-                  AppStrings.signupTitle,
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 24,
-                  ),
-                ),
+
+                TitleSubtitleBuilder(title: AppStrings.signupTitle,),
 
                 const SizedBox(height: 24),
 
