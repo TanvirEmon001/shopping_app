@@ -1,16 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shopping_app/app/constants/route_paths.dart';
+import 'package:shopping_app/features/auth/presentation/screens/forget_password_screen.dart';
 
 import '../../features/auth/presentation/screens/create_account_screen.dart';
 import '../../features/auth/presentation/screens/sign_in_screen.dart';
 
-List<RouteBase> routes = [
+
+final routes = <RouteBase>[
   GoRoute(path: RoutePaths.homeScreen, builder: routeBuilder[0]),
   GoRoute(path: RoutePaths.createAccountScreen, builder: routeBuilder[1]),
+  GoRoute(path: RoutePaths.forgetPassScreen, builder: routeBuilder[2]),
 ];
 
-List<Widget Function(BuildContext, GoRouterState)?> routeBuilder = [
+final routeBuilder = <Widget Function(BuildContext, GoRouterState)?>[
   (context, state) => const SignInScreen(),
   (context, state) => const CreateAccountScreen(),
+  (context, state) => const ForgetPasswordScreen()
 ];

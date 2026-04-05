@@ -5,6 +5,7 @@ import 'package:shopping_app/app/constants/app_strings.dart';
 import 'package:shopping_app/app/constants/route_paths.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/divider_middle_text.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/social_icon_button.dart';
+import 'package:shopping_app/features/auth/presentation/widgets/title_subtitle_builder.dart';
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/secondary_button.dart';
 
@@ -29,20 +30,9 @@ class _SignInScreenState extends State<SignInScreen> {
                 crossAxisAlignment: .start,
                 mainAxisSize: .min,
                 children: [
-                  Text(
-                    AppStrings.loginTitle,
-                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 24,
-                    ),
-                  ),
-                  Text(
-                    AppStrings.loginSubTitle,
-                    style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                    ),
+                  TitleSubtitleBuilder(
+                    title: AppStrings.loginTitle,
+                    subtitle: AppStrings.loginSubTitle,
                   ),
 
                   const SizedBox(height: 20),
@@ -55,7 +45,10 @@ class _SignInScreenState extends State<SignInScreen> {
                       hintStyle: TextStyle(color: Colors.black),
                       prefixIcon: Icon(Icons.send),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(width: 1, color: Color(0xD9D9D900)),
+                        borderSide: BorderSide(
+                          width: 1,
+                          color: Color(0xD9D9D900),
+                        ),
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                     ),
@@ -73,7 +66,10 @@ class _SignInScreenState extends State<SignInScreen> {
                         icon: const Icon(Icons.visibility_off),
                       ),
                       border: const OutlineInputBorder(
-                        borderSide: BorderSide(width: 1, color: Color(0xD9D9D900)),
+                        borderSide: BorderSide(
+                          width: 1,
+                          color: Color(0xD9D9D900),
+                        ),
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                     ),
@@ -101,7 +97,9 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                         const Spacer(),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            context.push(RoutePaths.forgetPassScreen);
+                          },
                           child: Text(
                             AppStrings.forgetPassword,
                             style: TextStyle(
@@ -115,26 +113,37 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
 
-                  PrimaryButton(buttonName: AppStrings.signIn, onTap: () {
-                    context.push(RoutePaths.createAccountScreen);
-                  }),
+                  PrimaryButton(
+                    buttonName: AppStrings.signIn,
+                    onTap: () {
+                      context.push(RoutePaths.createAccountScreen);
+                    },
+                  ),
                   const SizedBox(height: 10),
-                  SecondaryButton(buttonName: AppStrings.createAccount, onTap: () {}),
+                  SecondaryButton(
+                    buttonName: AppStrings.createAccount,
+                    onTap: () {},
+                  ),
                   const SizedBox(height: 30),
 
                   DividerMiddleText(title: AppStrings.orSignInWith),
 
-                  const SizedBox(height: 10,),
+                  const SizedBox(height: 10),
 
                   Row(
                     spacing: 5,
                     mainAxisAlignment: .center,
                     children: [
-                      SocialIconButton(iconPath: AssetPaths.googleIcon, onPressed: (){}),
-                      SocialIconButton(iconPath: AssetPaths.fbIcon, onPressed: (){}),
+                      SocialIconButton(
+                        iconPath: AssetPaths.googleIcon,
+                        onPressed: () {},
+                      ),
+                      SocialIconButton(
+                        iconPath: AssetPaths.fbIcon,
+                        onPressed: () {},
+                      ),
                     ],
-                  )
-
+                  ),
                 ],
               ),
             ),
