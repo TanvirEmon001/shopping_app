@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shopping_app/app/constants/asset_paths.dart';
 import 'package:shopping_app/app/constants/app_strings.dart';
+import 'package:shopping_app/app/constants/route_paths.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/divider_middle_text.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/social_icon_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
@@ -113,7 +115,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
 
-                  PrimaryButton(buttonName: AppStrings.signIn, onTap: () {}),
+                  PrimaryButton(buttonName: AppStrings.signIn, onTap: () {
+                    context.push(RoutePaths.createAccountScreen);
+                  }),
                   const SizedBox(height: 10),
                   SecondaryButton(buttonName: AppStrings.createAccount, onTap: () {}),
                   const SizedBox(height: 30),
