@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../features/auth/presentation/screens/sign_in_screen.dart';
-
+import 'package:shopping_app/app/routers/routes_list.dart';
 
 class Routers {
   BuildContext? context;
-  static final GoRouter router = GoRouter(routes: [
-    GoRoute(path: "/", builder: (context, state) => const SignInScreen()),
-  ]);
+  static final GoRouter router = GoRouter(routes: routes);
 }
