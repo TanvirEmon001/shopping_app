@@ -9,6 +9,8 @@ import 'package:shopping_app/features/auth/presentation/widgets/title_subtitle_b
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/secondary_button.dart';
 
+import '../widgets/blue_gesture_button.dart';
+
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
 
@@ -33,6 +35,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   TitleSubtitleBuilder(
                     title: AppStrings.loginTitle,
                     subtitle: AppStrings.loginSubTitle,
+                    subtitleTextAlign: TextAlign.left,
                   ),
 
                   const SizedBox(height: 24),
@@ -98,19 +101,9 @@ class _SignInScreenState extends State<SignInScreen> {
                           style: TextStyle(fontWeight: .w400, fontSize: 12),
                         ),
                         const Spacer(),
-                        GestureDetector(
-                          onTap: () {
-                            context.push(RoutePaths.forgetPassScreen);
-                          },
-                          child: Text(
-                            AppStrings.forgetPassword,
-                            style: TextStyle(
-                              fontWeight: .w400,
-                              fontSize: 10,
-                              color: Color(0xFF0857A0),
-                            ),
-                          ),
-                        ),
+                        BlueGestureButton(buttonName: AppStrings.forgetPassword, onTap: (){
+                          context.push(RoutePaths.forgetPassScreen);
+                        }),
                       ],
                     ),
                   ),

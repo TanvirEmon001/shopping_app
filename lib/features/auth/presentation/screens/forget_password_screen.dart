@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shopping_app/app/constants/app_strings.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/title_subtitle_builder.dart';
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
+
+import '../../../../app/constants/route_paths.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
   const ForgetPasswordScreen({super.key});
@@ -22,13 +25,14 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             TitleSubtitleBuilder(
               title: AppStrings.forgetPasswordTitle,
               subtitle: AppStrings.forgetPasswordSubTitle,
+              subtitleTextAlign: TextAlign.left,
             ),
             const SizedBox(height: 48,),
             TextField(
               keyboardType: .emailAddress,
               textInputAction: .next,
               decoration: const InputDecoration(
-                hintText: "Email",
+                hintText: AppStrings.email,
                 hintStyle: TextStyle(color: Colors.black),
                 prefixIcon: Icon(Icons.send),
                 border: OutlineInputBorder(
@@ -41,7 +45,9 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               ),
             ),
             const SizedBox(height: 24,),
-            PrimaryButton(buttonName: AppStrings.submit, onTap: (){})
+            PrimaryButton(buttonName: AppStrings.submit, onTap: (){
+              context.push(RoutePaths.emailSentScreen);
+            })
             
           ],
         ),
