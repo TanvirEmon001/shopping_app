@@ -35,13 +35,13 @@ class _SignInScreenState extends State<SignInScreen> {
                     subtitle: AppStrings.loginSubTitle,
                   ),
 
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 24),
 
                   TextField(
                     keyboardType: .emailAddress,
                     textInputAction: .next,
                     decoration: const InputDecoration(
-                      hintText: "Email",
+                      hintText: AppStrings.email,
                       hintStyle: TextStyle(color: Colors.black),
                       prefixIcon: Icon(Icons.send),
                       border: OutlineInputBorder(
@@ -53,12 +53,12 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 16),
                   TextField(
                     keyboardType: .visiblePassword,
                     obscureText: true,
                     decoration: InputDecoration(
-                      hintText: "Password",
+                      hintText: AppStrings.password,
                       hintStyle: const TextStyle(color: Colors.black),
                       prefixIcon: const Icon(Icons.password),
                       suffixIcon: IconButton(
@@ -74,6 +74,8 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                   ),
+
+                  const SizedBox(height: 16),
 
                   Padding(
                     padding: const EdgeInsets.only(right: 10),
@@ -112,23 +114,25 @@ class _SignInScreenState extends State<SignInScreen> {
                       ],
                     ),
                   ),
-
+                  const SizedBox(height: 24),
                   PrimaryButton(
                     buttonName: AppStrings.signIn,
                     onTap: () {
                       context.push(RoutePaths.createAccountScreen);
                     },
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 8),
                   SecondaryButton(
                     buttonName: AppStrings.createAccount,
-                    onTap: () {},
+                    onTap: () {
+                      context.push(RoutePaths.createAccountScreen);
+                    },
                   ),
                   const SizedBox(height: 30),
 
                   DividerMiddleText(title: AppStrings.orSignInWith),
 
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 19),
 
                   Row(
                     spacing: 5,

@@ -20,7 +20,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   @override
   Widget build(context) {
     return Scaffold(
-      appBar: AppBar(automaticallyImplyLeading: true),
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(35),
         child: Center(
@@ -191,7 +191,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 ),
                 const SizedBox(height: 28),
 
-                DividerMiddleText(title: AppStrings.orSignInWith),
+                DividerMiddleText(title: AppStrings.orSignupWith),
 
                 const SizedBox(height: 17),
 
