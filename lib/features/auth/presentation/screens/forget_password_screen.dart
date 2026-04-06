@@ -14,7 +14,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(automaticallyImplyLeading: true),
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(36),
         child: Column(
