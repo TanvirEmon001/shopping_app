@@ -41,6 +41,7 @@ class AppStrings {
   // Reset Password Screen
   static const String resetPasswordTitle = 'Password Reset Email Sent';
   static const String resetPasswordSubTitle = 'We’ve sent a password reset link to your email. Please check your inbox and follow the instructions to reset your password';
+  static const String myEmail = "emon-hossain@gmail.com";
   static const String done = 'Done';
 
   // Verify Email Screen
