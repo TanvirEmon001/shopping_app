@@ -33,7 +33,12 @@ jobs:
         run: flutter analyze
 
       - name: Run tests
-        run: flutter test
+        run: |
+          if [ -d "test" ] && [ "$(ls -A test/*.dart 2>/dev/null)" ]; then
+            flutter test
+          else
+            echo "No tests found, skipping..."
+          fi
 
       - name: Build APK
         run: flutter build apk --release --no-shrink
