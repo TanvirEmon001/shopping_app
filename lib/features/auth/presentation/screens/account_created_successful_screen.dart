@@ -24,7 +24,7 @@ class _AccountCreatedSuccessfulScreenState extends State<AccountCreatedSuccessfu
       ),
       body: Column(
         children: [
-          Image.asset(AssetPaths.newMsgBg, width: 389, height: 295),
+          Image.asset(AssetPaths.successBg, width: 389, height: 295),
 
           Container(
             margin: const EdgeInsets.all(30),
