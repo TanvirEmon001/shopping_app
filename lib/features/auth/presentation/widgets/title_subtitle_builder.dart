@@ -20,6 +20,7 @@ class TitleSubtitleBuilder extends StatelessWidget {
       children: [
         Text(
           title,
+          textAlign: .center,
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
             fontWeight: FontWeight.w700,
             fontSize: 24,

@@ -4,4 +4,5 @@ class RoutePaths {
   static const String forgetPassScreen = "/forget-pass";
   static const String emailSentScreen = "/email-sent";
   static const String verifyEmailScreen = "/verify-email";
+  static const String accountCreatedSuccessScreen = "/account-success";
 }

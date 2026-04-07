@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shopping_app/app/constants/route_paths.dart';
+import 'package:shopping_app/features/auth/presentation/screens/account_created_successful_screen.dart';
 import 'package:shopping_app/features/auth/presentation/screens/forget_password_screen.dart';
 import 'package:shopping_app/features/auth/presentation/screens/sent_email_success_screen.dart';
 import 'package:shopping_app/features/auth/presentation/screens/verify_email_address_screen.dart';
-
 import '../../features/auth/presentation/screens/create_account_screen.dart';
 import '../../features/auth/presentation/screens/sign_in_screen.dart';
 
@@ -15,6 +15,7 @@ final routes = <RouteBase>[
   GoRoute(path: RoutePaths.forgetPassScreen, builder: routeBuilder[2]),
   GoRoute(path: RoutePaths.emailSentScreen, builder: routeBuilder[3]),
   GoRoute(path: RoutePaths.verifyEmailScreen, builder: routeBuilder[4]),
+  GoRoute(path: RoutePaths.accountCreatedSuccessScreen, builder: routeBuilder[5]),
 ];
 
 final routeBuilder = <Widget Function(BuildContext, GoRouterState)?>[
@@ -23,4 +24,5 @@ final routeBuilder = <Widget Function(BuildContext, GoRouterState)?>[
   (context, state) => const ForgetPasswordScreen(),
   (context, state) => const SentEmailSuccessScreen(),
   (context, state) => const VerifyEmailAddressScreen(),
+  (context, state) => const AccountCreatedSuccessfulScreen(),
 ];
