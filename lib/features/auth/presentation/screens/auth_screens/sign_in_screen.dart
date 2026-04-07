@@ -9,7 +9,7 @@ import 'package:shopping_app/features/auth/presentation/widgets/title_subtitle_b
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/secondary_button.dart';
 
-import '../widgets/blue_gesture_button.dart';
+import '../../widgets/blue_gesture_button.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});

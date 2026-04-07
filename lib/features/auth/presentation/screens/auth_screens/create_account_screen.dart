@@ -6,8 +6,8 @@ import 'package:shopping_app/features/auth/presentation/widgets/divider_middle_t
 import 'package:shopping_app/features/auth/presentation/widgets/social_icon_button.dart';
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
 
-import '../../../../app/theme/color_theme.dart';
-import '../widgets/title_subtitle_builder.dart';
+import '../../../../../app/theme/color_theme.dart';
+import '../../widgets/title_subtitle_builder.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});
