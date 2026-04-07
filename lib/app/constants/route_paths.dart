@@ -3,4 +3,5 @@ class RoutePaths {
   static const String createAccountScreen = "/create-account";
   static const String forgetPassScreen = "/forget-pass";
   static const String emailSentScreen = "/email-sent";
+  static const String verifyEmailScreen = "/verify-email";
 }
