@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shopping_app/app/constants/app_strings.dart';
 import 'package:shopping_app/app/constants/asset_paths.dart';
+import 'package:shopping_app/app/constants/route_paths.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/blue_gesture_button.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/title_subtitle_builder.dart';
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
@@ -45,7 +46,9 @@ class _VerifyEmailAddressScreenState extends State<VerifyEmailAddressScreen> {
                 ),
                 const SizedBox(height: 48,),
 
-                PrimaryButton(buttonName: AppStrings.uContinue, onTap: (){}),
+                PrimaryButton(buttonName: AppStrings.uContinue, onTap: (){
+                  context.go(RoutePaths.accountCreatedSuccessScreen);
+                }),
                 const SizedBox(height: 16,),
 
                 BlueGestureButton(buttonName: AppStrings.resendEmail, onTap: (){})
