@@ -4,7 +4,7 @@ import 'package:shopping_app/app/constants/app_strings.dart';
 import 'package:shopping_app/features/auth/presentation/widgets/title_subtitle_builder.dart';
 import 'package:shopping_app/features/common/presentation/widgets/primary_button.dart';
 
-import '../../../../app/constants/route_paths.dart';
+import '../../../../../app/constants/route_paths.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
   const ForgetPasswordScreen({super.key});

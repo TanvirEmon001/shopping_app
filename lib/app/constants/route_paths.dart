@@ -1,5 +1,6 @@
 class RoutePaths {
-  static const String homeScreen = "/";
+  static const String onboardingScreen = "/";
+  static const String homeScreen = "/home";
   static const String createAccountScreen = "/create-account";
   static const String forgetPassScreen = "/forget-pass";
   static const String emailSentScreen = "/email-sent";
